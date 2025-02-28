@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treatment Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Medical Treatment Prediction</h1>
+        
+        <form class="form">
+            <h2>Age at Diagnosis</h2>
+            <input type="text" id="uiAge" class="input-field" placeholder="Enter Age">
+
+            <h2 style="margin-bottom: 25px;">AJCC Pathologic Stage</h2>
+            <div class="radio-container">
+
+                <div class="radio-group" id="uiStage">
+                    <input type="radio" id="stage0" name="uiStage" value="0"><label for="stage0">Stage I</label>
+                    <input type="radio" id="stage1" name="uiStage" value="1"><label for="stage1">Stage IA</label>
+                    <input type="radio" id="stage2" name="uiStage" value="2"><label for="stage2">Stage IB</label>
+                    <input type="radio" id="stage3" name="uiStage" value="3"><label for="stage3">Stage II</label>
+                    <input type="radio" id="stage4" name="uiStage" value="4"><label for="stage4">Stage IIA</label>
+                    <input type="radio" id="stage5" name="uiStage" value="5"><label for="stage5">Stage IIB</label>
+                    <input type="radio" id="stage6" name="uiStage" value="6"><label for="stage6">Stage III</label>
+                    <input type="radio" id="stage7" name="uiStage" value="7"><label for="stage7">Stage IIIA</label>
+                    <input type="radio" id="stage8" name="uiStage" value="8"><label for="stage8">Stage IIIB</label>
+                    <input type="radio" id="stage9" name="uiStage" value="9"><label for="stage9">Stage IIIC</label>
+                    <input type="radio" id="stage10" name="uiStage" value="10"><label for="stage10">Stage IV</label>
+                    <input type="radio" id="stage11" name="uiStage" value="11"><label for="stage11">Stage X</label>
+                </div>
+            </div>
+
+            <h2>Cancer Category</h2>
+            <select class="dropdown" id="uiCancerCategory">
+                <option disabled selected>Choose a Cancer Category</option>
+            </select>
+
+            <h2>Diagnosis Method</h2>
+            <select class="dropdown" id="uiDiagnosisMethod">
+                <option disabled selected>Choose a Diagnosis Method</option>
+            </select>
+
+            <h2>Treatment Category</h2>
+            <select class="dropdown" id="uiTreatmentCategory">
+                <option disabled selected>Choose a Treatment Category</option>
+            </select>
+
+            <button class="submit" onclick="onClickedPredictTreatment()" type="button">Predict Treatment</button>
+            <div id="uiResult" class="result"><h2></h2></div>
+        </form>
+    </div>
+</body>
+</html>
